@@ -1,0 +1,47 @@
+@baseurl  = http://178.128.110.188
+
+
+//============================================== getotp
+###
+POST {{baseurl}}/api/v1/customer/getotp/
+Content-Type: application/json
+Accept: application/json
+
+{
+     "phone": "+85592609401" 
+}
+//============================================== verify
+###
+POST {{baseurl}}/api/v1/customer/verify/
+Content-Type: application/json
+Accept: application/json
+
+{
+    "phone": "+85592609408",
+    "otp": "344546",
+    "channel": "sms"
+}
+//============================================== signup
+###
+POST {{baseurl}}/api/v1/customer/signup/
+Content-Type: application/json
+Accept: application/json
+
+{
+    "password": "a1111",
+    "username": "+85593461502",
+    "phone": "+85593461502",
+    "channel": "sms"
+}
+
+//============================================== login
+###
+POST {{baseurl}}/api/v1/customer/login/
+Content-Type: application/json
+Accept: application/json
+
+{
+    //"username": "+85599994334",
+    "username": "+85599994334",
+    "password": "a12345"
+}
